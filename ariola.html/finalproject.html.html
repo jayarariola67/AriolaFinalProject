@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luxury Car Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Jay Luxury Car Store</h1>
+  <div class="cart-box-top">🛒 Cart: <span id="cart-count">0</span></div>
+</header>
+
+<section class="search-section">
+  <input
+    type="text"
+    id="search"
+    placeholder="Search cars..."
+    onkeyup="searchCars()"
+  />
+</section>
+
+<main class="products" id="product-list">
+
+  <div class="card" data-name="BMW M4">
+    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d" alt="BMW">
+    <h2>BMW M4</h2>
+    <p>$75,000</p>
+    <button onclick="addToCart('BMW M4', 75000)">Add to Cart</button>
+  </div>
+
+  <div class="card" data-name="Audi R8">
+    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7" alt="Audi">
+    <h2>Audi R8</h2>
+    <p>$120,000</p>
+    <button onclick="addToCart('Audi R8', 120000)">Add to Cart</button>
+  </div>
+
+  <div class="card" data-name="Mercedes AMG GT">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Mercedes">
+    <h2>Mercedes AMG GT</h2>
+    <p>$140,000</p>
+    <button onclick="addToCart('Mercedes AMG GT', 140000)">Add to Cart</button>
+  </div>
+
+</main>
+
+<section class="cart-container">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <h3>Total: $<span id="total">0</span></h3>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
